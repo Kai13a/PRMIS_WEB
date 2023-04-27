@@ -1,0 +1,105 @@
+<div class="content-container">
+  <h2>Edit Profile</h2>
+  <span>Please enter your personal information.</span>
+  <h3>User Profile Picture</h3>
+  <div class="picture-container">
+    <img src="assets/svg/user.svg" alt="" />
+    <div class="picture-actions">
+      <button>Upload Photo</button>
+      <button>Remove Photo</button>
+    </div>
+  </div>
+  <form class="form-container">
+    <h3>Basic Information</h3>
+    <div class="basic-info-container">
+      <div class="i4-container">
+        <div class="input-item">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" />
+        </div>
+        <div class="input-item">
+          <label for="middleName">Middle Name</label>
+          <input type="text" id="middleName" />
+        </div>
+        <div class="input-item">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" />
+        </div>
+        <div class="input-item">
+          <label for="srCode">SR-Code</label>
+          <input type="text" id="srCode" />
+        </div>
+      </div>
+    </div>
+    <h3>Additional Information</h3>
+    <div class="additional-info-container">
+      <div class="i3-container">
+        <div class="input-item">
+          <label for="age">Age</label>
+          <input type="number" id="age" />
+        </div>
+        <div class="input-item">
+          <label for="gender">Gender</label>
+          <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="preferNotToSay">Prefer not to say</option>
+          </select>
+        </div>
+        <div class="input-item">
+          <label for="dateOfBirth">Date of Birth</label>
+          <input type="date" id="dateOfBirth" />
+        </div>
+      </div>
+      <div class="i2-container">
+        <div class="input-item">
+          <label for="civilStatus">Civil Status</label>
+          <select name="civilStatus" id="civilStatus">
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="seperated">Seperated</option>
+            <option value="divorced">Divorced</option>
+            <option value="widowed">Widowed</option>
+          </select>
+        </div>
+        <div class="input-item">
+          <label for="placeOfOrigin">Place of Origin</label>
+          <input type="text" id="placeOfOrigin" />
+        </div>
+      </div>
+    </div>
+    <h3>Contact Information</h3>
+    <div class="contact-info-container">
+      <div class="i2-container">
+        <div class="input-item">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="input-item">
+          <label for="phoneNumber">Phone Number</label>
+          <input type="tel" id="phoneNumber" />
+        </div>
+      </div>
+    </div>
+    <h3>Special Information</h3>
+    <div class="special-info-container">
+      <div class="i2-container">
+        <div class="input-item">
+          <label for="campus">Campus</label>
+          <select name="campus" id="campus">
+            <option value="alangilan">Alangilan</option>
+            <option value="pabloBorbon">Pablo-Borbon</option>
+          </select>
+        </div>
+        <div class="input-item">
+          <label for="role">Role</label>
+          <input type="text" id="role" />
+        </div>
+      </div>
+    </div>
+    <div class="button-action-group">
+      <button>Revert Changes</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</div>

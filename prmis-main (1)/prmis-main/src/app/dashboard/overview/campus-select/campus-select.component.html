@@ -1,0 +1,16 @@
+<div class="filter-item">
+  <img src="assets/svg/campus.svg" alt="" />
+  <select
+    #dropdown
+    name="campus-filter"
+    id="campus-filter"
+    (change)="onCampusChange(dropdown.value)"
+  >
+    <option *ngIf="placeholder != undefined" value="" disabled selected>
+      {{ placeholder }}
+    </option>
+    <option *ngFor="let campus of campuses" value="{{ campus.key }}">
+      {{ campus.value }}
+    </option>
+  </select>
+</div>

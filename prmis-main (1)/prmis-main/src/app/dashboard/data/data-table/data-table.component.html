@@ -1,0 +1,14 @@
+<div class="content-container">
+  <div class="inner-container">
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let header of headers">{{ header }}</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let row of data">
+        <td *ngFor="let cell of row">{{ cell }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

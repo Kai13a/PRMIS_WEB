@@ -1,0 +1,93 @@
+<div
+  *ngIf="isAdmin != undefined && fullName != undefined; else verifying"
+  class="grid-container"
+>
+  <div class="logo-container">
+    <div id="left">
+      <img src="assets/app-logo.png" alt="" />
+    </div>
+    <div id="right">
+      <p>Personnel Record Management Information System</p>
+    </div>
+  </div>
+  <div class="header-container">
+    <div class="text-container">
+      <h1>Batangas State University</h1>
+    </div>
+    <div class="toolbar-container">
+      <div class="toolbar-items"></div>
+      <div class="user-item">
+        <button id="profile-button" (click)="navToProfile()">
+          <img id="user-icon" src="assets/svg/profile.svg" alt="" />
+          <span>{{ fullName }}</span>
+        </button>
+        <button id="dropdown-button" (click)="toggleUserMenu()">
+          <img id="dropdown-icon" src="assets/svg/dropdown.svg" alt="" />
+        </button>
+        <div class="user-menu hidden">
+          <button
+            class="user-menu-item {{ isAdmin ? 'hidden' : '' }}"
+            (click)="editProfile()"
+          >
+            <img src="assets/svg/user.svg" alt="" />
+            <span>Edit Profile</span>
+          </button>
+          <button class="user-menu-item" (click)="logOut()">
+            <img src="assets/svg/logout.svg" alt="" />
+            <span>Logout</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-container">
+    <div class="nav-container">
+      <button
+        class="nav-item {{ isAdmin ? 'selected-nav-item' : 'hidden' }}"
+        id="overview-button"
+        (click)="navigateTab('overview')"
+      >
+        <img class="nav-icon" src="assets/svg/dashboard.svg" alt="" />
+        <span class="nav-label">Dashboard</span>
+      </button>
+      <button
+        class="nav-item {{ isAdmin ? 'hidden' : 'selected-nav-item' }}"
+        id="profile-button"
+        (click)="navigateTab('overview')"
+      >
+        <img class="nav-icon" src="assets/svg/profile.svg" alt="" />
+        <span class="nav-label">My Profile</span>
+      </button>
+      <button
+        class="nav-item {{ isAdmin ? '' : 'hidden' }}"
+        id="data-button"
+        (click)="navigateTab('data')"
+      >
+        <img class="nav-icon" src="assets/svg/data.svg" alt="" />
+        <span class="nav-label">Data</span>
+      </button>
+      <button class="nav-item" id="about-button" (click)="navigateTab('about')">
+        <img class="nav-icon" src="assets/svg/about.svg" alt="" />
+        <span class="nav-label">About Us</span>
+      </button>
+    </div>
+    <button class="logout-container">
+      <div class="nav-item" id="logout-button" (click)="logOut()">
+        <img class="nav-icon" src="assets/svg/logout.svg" alt="" />
+        <span class="nav-label">Logout</span>
+      </div>
+    </button>
+  </div>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<ng-template #verifying>
+  <div class="verifying-container">
+    <div class="verifying-content">
+      <img src="assets/svg/loading.svg" alt="" />
+      <p>Verifying permissions...</p>
+    </div>
+  </div>
+</ng-template>
+<!-- <button (click)="signOut()">sign out</button> -->

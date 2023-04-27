@@ -1,0 +1,58 @@
+<div class="main-container">
+  <header>
+    <div class="header-image-container">
+      <img src="assets/app-logo.png" alt="logo" />
+    </div>
+    <div class="header-text-container">
+      <h1>BATANGAS STATE UNIVERSITY</h1>
+      <h2>The National Engineering University</h2>
+    </div>
+  </header>
+  <div class="content">
+    <div id="left-container">
+      <div id="welcome">
+        <div id="img-container">
+          <img src="assets/spartan-logo.png" alt="" />
+        </div>
+        <div id="text-container">
+          <h1>Personnel Record Management Information System</h1>
+          <span>Please enter the required information to login.</span>
+        </div>
+      </div>
+      <form
+        [formGroup]="loginForm"
+        (ngSubmit)="tryLogin()"
+        id="input-container"
+      >
+        <div class="input-group">
+          <label for="email">Email Address</label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Email"
+            formControlName="email"
+            class="login_field1"
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            formControlName="password"
+            class="login_field2"
+          />
+        </div>
+        <div class="button-group">
+          <button id="login" type="submit" [disabled]="disabled">Login</button>
+        </div>
+      </form>
+    </div>
+    <div id="right-container"></div>
+  </div>
+  <footer>
+    <div id="badge-group"></div>
+    <span>Copyright, all rights reserved.</span>
+  </footer>
+</div>

@@ -1,0 +1,14 @@
+<div class="content-container">
+  <div class="filter-container">
+    <year-select [beginYear]="2020"></year-select>
+    <campus-select></campus-select>
+  </div>
+  <canvas
+    baseChart
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [legend]="lineChartLegend"
+  >
+  </canvas>
+</div>

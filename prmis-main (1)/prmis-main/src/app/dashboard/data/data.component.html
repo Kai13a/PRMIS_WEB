@@ -1,0 +1,5 @@
+<div class="content-container">
+  <search-bar (search)="onSearch($event)"></search-bar>
+  <data-table [headers]="tableHeaders" [data]="tableData"></data-table>
+  <form-selector (formSelected)="onFormSelect($event)"></form-selector>
+</div>

@@ -1,0 +1,16 @@
+<div class="filter-item">
+  <img src="assets/svg/calendar.svg" alt="" />
+  <select
+    #dropdown
+    name="year-filter"
+    id="year-filter"
+    (change)="onYearChange(dropdown.value)"
+  >
+    <option *ngIf="placeholder != undefined" value="" disabled selected>
+      {{ placeholder }}
+    </option>
+    <option *ngFor="let year of years" value="{{ year }}">
+      {{ year }}
+    </option>
+  </select>
+</div>

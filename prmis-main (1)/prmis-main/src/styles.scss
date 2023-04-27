@@ -1,0 +1,26 @@
+:root {
+  // sizing
+  --header-height: 6rem;
+  --sidebar-width: 16rem;
+  --mobile-header-height: 4rem;
+  --mobile-sidebar-width: 4rem;
+
+  // colors
+  --panel-background: #f4f4eb;
+  --main-background: #fff;
+  --border-color: #ccc;
+
+  --searchbar-color: #d9e8f4;
+  --datatable-color: #d9e8f4;
+  --datatable-inner-color: #f6fbff;
+  --userlist-color: #d9e8f4;
+  --userlist-inner-color: #f6fbff;
+  --formselector-color: #d9e8f4;
+  --formselector-active-color: #fff;
+  --formselector-hover-color: #ffffff5b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", sans-serif;
+}

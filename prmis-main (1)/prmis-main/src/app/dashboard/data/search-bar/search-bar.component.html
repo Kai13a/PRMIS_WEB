@@ -1,0 +1,12 @@
+<div class="bar-container">
+  <input
+    #inputElement
+    type="text"
+    name="search-input"
+    id="search-input"
+    placeholder="Search"
+  />
+  <button id="search-button" (click)="onSearch(inputElement.value)">
+    <img src="assets/svg/search.svg" alt="Search" />
+  </button>
+</div>
