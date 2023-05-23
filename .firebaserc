@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "finalproject-8dfe4": {
+      "hosting": {
+        "prmis": [
+          "finalproject-8dfe4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "finalproject-8dfe4"
+  }
+}
